@@ -1,13 +1,17 @@
 name: Build app renygp
 on:
   push:
-    branches:
-        - main
-    paths:
-    - java-app/**
+    branches: [main]
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
+    defaults:
+      run:
+        # Set the working directory to the java-app directory
+        # works only for the shell.
+        working-directory: java-app
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 21
