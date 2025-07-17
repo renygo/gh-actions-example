@@ -7,6 +7,11 @@ name: Build a Java Application
 on:
   workflow_dispatch:
     # Trigger the workflow manually
+    inputs:
+      java-version:
+        description: 'Java version to use'
+        required: false
+        default: '21'
   push:
     branches: [ "main" ]
   pull_request:
