@@ -51,7 +51,7 @@ jobs:
   cve-scan:
     runs-on: ubuntu-latest
     needs: test
-    if: github.ref == 'main' || startsWith(github.ref, 'refs/heads/feature/') || startsWith(github.ref, 'refs/heads/bugfix/')
+    if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/feature/') || startsWith(github.ref, 'refs/heads/bugfix/')
     steps:
       - name: CVE Scan
         run: echo "🛡️ Scanning dependencies..."
