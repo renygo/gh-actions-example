@@ -10,19 +10,19 @@ on:
     inputs:
       java-version:
         description: 'Java version to use'
-        required: false
+        required: true
         default: '21'
+      maven-version:
+          description: 'Maven version to use'
+          required: true
+          default: '3.9.4'
+
   push:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  greet:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Greeting
-        run: echo "Hello, World! This is a Java application build workflow."
   build:
     runs-on: ubuntu-latest
     permissions:
