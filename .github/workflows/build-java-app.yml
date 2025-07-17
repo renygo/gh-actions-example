@@ -15,6 +15,6 @@ jobs:
           distribution: 'temurin'
       - name: Build JAR
         run: |
-          ./mvnw clean package -DskipTests
+          mvn clean package -DskipTests
       - name: Upload JAR artifact
         uses: actions/upload-artifact@v4
