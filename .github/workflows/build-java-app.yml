@@ -5,6 +5,8 @@
 name: Build a Java Application
 
 on:
+  workflow_dispatch:
+    # Trigger the workflow manually
   push:
     branches: [ "main" ]
   pull_request:
