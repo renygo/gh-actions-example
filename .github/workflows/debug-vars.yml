@@ -29,6 +29,6 @@ jobs:
         run: echo "Final MY_VAR value is $MY_VAR"  # And there?
 
       - name: Print Secret-Based Variable
-        run:
+        run: |
           echo "::add-mask::$MY_VAR"  # Mask the secret
           echo "Final Secret Value is ${{ secrets.MY_VAR }}"  # And there?
