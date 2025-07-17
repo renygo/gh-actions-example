@@ -7,8 +7,6 @@ name: Build a Java Application
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - java-app/**
   pull_request:
     branches: [ "main" ]
 
