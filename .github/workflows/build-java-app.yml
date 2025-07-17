@@ -18,6 +18,11 @@ on:
     branches: [ "main" ]
 
 jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greeting
+        run: echo "Hello, World! This is a Java application build workflow."
   build:
     runs-on: ubuntu-latest
     permissions:
