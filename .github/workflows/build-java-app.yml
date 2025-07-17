@@ -1,7 +1,9 @@
 name: Build app renygp
 on:
   push:
-    branches: [main]
+    branches: [ "main" ]
+    paths:
+      - java-app/**
 jobs:
   build:
     runs-on: ubuntu-latest
