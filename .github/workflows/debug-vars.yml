@@ -31,4 +31,4 @@ jobs:
       - name: Print Secret-Based Variable
         run: |
           echo "::add-mask::$MY_VAR"  # Mask the secret
-          echo "Final Secret Value is ${{ secrets.MY_VAR }}"  # And there?
+          echo "Final Secret Value is $MY_VAR"  # And there?
