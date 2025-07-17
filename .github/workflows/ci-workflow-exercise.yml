@@ -13,6 +13,7 @@
 name: CI Workflow Exercise
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - '**'
